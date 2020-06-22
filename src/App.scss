@@ -1,0 +1,51 @@
+@mixin font-dpr($font-size) {
+  font-size: $font-size;
+
+  [data-dpr='2'] & {
+    font-size: $font-size * 2;
+  }
+
+  [data-dpr='3'] & {
+    font-size: $font-size * 3;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+#root {
+  height: 100%;
+}
+.appView {
+  height: 100%;
+  width: 100%;
+}
+.app {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+.appTitle {
+  height: 45px;
+  width: 100%;
+}
+.appContent {
+  height: calc(100% - 45px);
+  width: 100%;
+}
+/* 文字省略号 */
+.textMore {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100%;
+}
+
+
